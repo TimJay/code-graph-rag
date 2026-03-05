@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "code-graph-rag"
 version = "0.0.116"
@@ -61,8 +65,10 @@ cgr = "codebase_rag.cli:app"
 [tool.uv]
 package = true
 
-[tool.setuptools]
-packages = ["codebase_rag", "codec", "cgr"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["codebase_rag*", "codec*", "cgr*"]
+exclude = ["codebase_rag.tests*"]
 
 [project.optional-dependencies]
 test = [
