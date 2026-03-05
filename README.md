@@ -530,7 +530,7 @@ claude mcp add --transport stdio code-graph-rag \
   --env CYPHER_PROVIDER=openai \
   --env CYPHER_MODEL=gpt-4 \
   --env CYPHER_API_KEY=your-api-key \
-  -- uv run --directory /path/to/code-graph-rag code-graph-rag mcp-server
+  -- uvx code-graph-rag mcp-server
 ```
 
 ### Available Tools
